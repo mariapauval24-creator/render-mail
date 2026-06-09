@@ -51,14 +51,23 @@ app.post('/contacto', async (req, res) => {
     })
   });
 
-  const result = await response.json();
+  const text = await response.text();
+console.log("Respuesta Web3Forms:", text);
 
-  if (result.success) {
-    res.json({ ok: true, mensaje: 'Mensaje enviado' });
-  } else {
-    res.status(500).json({ error: 'No se pudo enviar el correo' });
-  }
- 
+let result;
+
+try {
+  result = JSON.parse(text);
+} catch (error) {
+  return res.status(500).json({ error: "Web3Forms respondió algo que no es JSON" });
+}
+
+
+if (result.success) {
+    res.json({ ok: true, mensaje: "Mensaje enviado" });
+} else {
+    res.status(500).json({ error: "No se pudo enviar el correo" });
+}
   } catch (error) {
     console.error('Error enviando email:', error);
     res.status(500).json({ error: 'Error al enviar el correo. Intenta de nuevo.' });
