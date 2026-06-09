@@ -12,13 +12,15 @@ app.use(express.json());
  
 // Configurar el transportador de email
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
   auth: {
-    user: process.env.GMAIL_USER,     // tu@gmail.com
-    pass: process.env.GMAIL_APP_PASS,  // contraseña de app de 16 caracteres
-  },
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASS
+  }
 });
- 
+
 // Ruta de health check
 app.get('/', (req, res) => {
   res.send({ status: 'OK', mensaje: 'Servidor funcionando ✓' });
