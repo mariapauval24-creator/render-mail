@@ -15,6 +15,8 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
   secure: false,
+  requireTLS:true,
+  family:4,
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_APP_PASS
@@ -50,7 +52,7 @@ app.post('/contacto', async (req, res) => {
 <small>Enviado desde tu landing page vía Render</small>
       `,
     });
-    
+
  
     res.json({ ok: true, mensaje: '¡Registro exitoso! Revisa tu correo.' });
  
