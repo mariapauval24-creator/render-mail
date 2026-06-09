@@ -50,19 +50,7 @@ app.post('/contacto', async (req, res) => {
 <small>Enviado desde tu landing page vía Render</small>
       `,
     });
- 
-    // Email de confirmación al visitante
-    await transporter.sendMail({
-      from: process.env.GMAIL_USER,
-      to: email,
-      subject: '¡Gracias por tu interés! Te contactaremos pronto',
-      html: `
-<h2>Hola ${nombre}, recibimos tu registro ✓</h2>
-<p>Gracias por registrar tu interés. Nos pondremos en contacto
-        contigo muy pronto para contarte más sobre el producto.</p>
-<p>— El equipo</p>
-      `,
-    });
+    
  
     res.json({ ok: true, mensaje: '¡Registro exitoso! Revisa tu correo.' });
  
