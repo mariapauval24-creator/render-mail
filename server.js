@@ -37,24 +37,27 @@ app.post('/contacto', async (req, res) => {
     return res.status(400).json({ error: 'Nombre y email son obligatorios' });
   }
  try {
-    // Email que recibes TÚ (el fundador)
-    await transporter.sendMail({
-      from: process.env.GMAIL_USER,
-      to: process.env.GMAIL_USER,
-      subject: `🚀 Nuevo interesado en tu SaaS: ${nombre}`,
-      html: `
-<h2>Nuevo registro de interés</h2>
-<p><b>Nombre:</b> ${nombre}</p>
-<p><b>Email:</b> ${email}</p>
-<p><b>Empresa:</b> ${empresa || 'No especificó'}</p>
-<p><b>Mensaje:</b> ${mensaje || 'Sin mensaje adicional'}</p>
-<hr>
-<small>Enviado desde tu landing page vía Render</small>
-      `,
-    });
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      access_key: process.env.WEB3FORMS_KEY,
+      name: nombre,
+      email: email,
+      message: mensaje,
+      subject: `Nuevo interesado en Insky: ${nombre}`
+    })
+  });
 
- 
-    res.json({ ok: true, mensaje: '¡Registro exitoso! Revisa tu correo.' });
+  const result = await response.json();
+
+  if (result.success) {
+    res.json({ ok: true, mensaje: 'Mensaje enviado' });
+  } else {
+    res.status(500).json({ error: 'No se pudo enviar el correo' });
+  }
  
   } catch (error) {
     console.error('Error enviando email:', error);
