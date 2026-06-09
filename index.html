@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insky | Almacenamiento en la nube</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cielo: "#8ED8FF",
+            marino: "#0B1F3A",
+            beige: "#F4E8D0",
+            blanco: "#FFFFFF"
+          },
+          fontFamily: {
+            century: ['"Century Gothic"', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-century bg-white text-marino">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-beige">
+    <nav class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="#inicio" class="text-2xl font-bold text-marino">
+        Insky
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a href="#producto" class="hover:text-cielo transition">Producto</a>
+        <a href="#beneficios" class="hover:text-cielo transition">Beneficios</a>
+        <a href="#planes" class="hover:text-cielo transition">Planes</a>
+        <a href="#contacto" class="hover:text-cielo transition">Contacto</a>
+      </div>
+
+      <a href="#planes" class="bg-marino text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-cielo hover:text-marino transition duration-300">
+        Ver planes
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="min-h-screen bg-gradient-to-br from-cielo via-white to-beige flex items-center">
+      <div class="max-w-7xl mx-auto px-5 py-20 grid md:grid-cols-2 gap-12 items-center">
+
+        <div class="space-y-7 animate-pulse">
+          <span class="inline-block bg-white/70 text-marino px-4 py-2 rounded-full text-sm font-semibold">
+            Almacenamiento en la nube simple y seguro
+          </span>
+
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+            Guarda, organiza y accede a tus archivos desde cualquier lugar.
+          </h1>
+
+          <p class="text-lg text-marino/80 max-w-xl">
+            Insky es una empresa de venta de almacenamiento en la nube pensada para estudiantes, emprendedores y creadores que necesitan más espacio, seguridad y facilidad para trabajar.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#planes" class="bg-marino text-white px-7 py-3 rounded-full font-semibold text-center hover:bg-cielo hover:text-marino transition duration-300">
+              Comprar almacenamiento
+            </a>
+
+            <a href="#producto" class="border-2 border-marino text-marino px-7 py-3 rounded-full font-semibold text-center hover:bg-marino hover:text-white transition duration-300">
+              Conocer más
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="h-80 md:h-[450px] rounded-[2rem] bg-gradient-to-br from-marino via-cielo to-beige shadow-2xl p-6 flex items-end hover:scale-105 transition duration-500">
+            <div class="bg-white/80 backdrop-blur-md rounded-3xl p-6 w-full shadow-lg">
+              <p class="text-sm font-semibold text-marino/70">Espacio disponible</p>
+              <h3 class="text-4xl font-bold mt-2">1 TB</h3>
+              <div class="w-full bg-beige rounded-full h-4 mt-5">
+                <div class="bg-cielo h-4 rounded-full w-3/4"></div>
+              </div>
+              <p class="text-sm mt-3 text-marino/70">Tus archivos protegidos en Insky</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="producto" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+
+        <div class="h-80 rounded-[2rem] bg-gradient-to-tr from-beige via-cielo to-white shadow-xl hover:-translate-y-2 transition duration-500"></div>
+
+        <div class="space-y-6">
+          <span class="text-cielo font-bold uppercase tracking-widest text-sm">
+            Contexto del producto
+          </span>
+
+          <h2 class="text-3xl md:text-5xl font-bold">
+            Una nube creada para simplificar tu vida digital.
+          </h2>
+
+          <p class="text-marino/75 text-lg">
+            Insky ofrece almacenamiento en la nube para guardar documentos, fotos, videos, proyectos y archivos importantes en un solo lugar. Su objetivo es que el usuario deje de preocuparse por quedarse sin espacio.
+          </p>
+
+          <p class="text-marino/75 text-lg">
+            Con Insky puedes tener acceso rápido, respaldo seguro y planes flexibles según tus necesidades personales, escolares o profesionales.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="audiencia" class="py-24 bg-beige/60">
+      <div class="max-w-7xl mx-auto px-5 text-center">
+        <span class="text-cielo font-bold uppercase tracking-widest text-sm">
+          Audiencia
+        </span>
+
+        <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-14">
+          ¿Para quién es Insky?
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="bg-white p-8 rounded-3xl shadow-md hover:-translate-y-2 transition duration-500">
+            <div class="h-32 rounded-2xl bg-gradient-to-br from-cielo to-white mb-6"></div>
+            <h3 class="text-2xl font-bold mb-3">Estudiantes</h3>
+            <p class="text-marino/70">
+              Para guardar tareas, proyectos, apuntes, presentaciones y archivos escolares sin preocuparse por el espacio.
+            </p>
+          </article>
+
+          <article class="bg-white p-8 rounded-3xl shadow-md hover:-translate-y-2 transition duration-500">
+            <div class="h-32 rounded-2xl bg-gradient-to-br from-marino to-cielo mb-6"></div>
+            <h3 class="text-2xl font-bold mb-3">Emprendedores</h3>
+            <p class="text-marino/70">
+              Para organizar documentos, catálogos, ventas, diseños y archivos importantes de su negocio.
+            </p>
+          </article>
+
+          <article class="bg-white p-8 rounded-3xl shadow-md hover:-translate-y-2 transition duration-500">
+            <div class="h-32 rounded-2xl bg-gradient-to-br from-beige to-cielo mb-6"></div>
+            <h3 class="text-2xl font-bold mb-3">Creadores</h3>
+            <p class="text-marino/70">
+              Para almacenar fotos, videos, contenido digital y materiales pesados de forma segura.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="py-24 bg-marino text-white">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-3xl mb-14">
+          <span class="text-cielo font-bold uppercase tracking-widest text-sm">
+            Propuesta de valor
+          </span>
+
+          <h2 class="text-3xl md:text-5xl font-bold mt-4">
+            Más espacio, más seguridad y menos complicaciones.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition duration-300">
+            <h3 class="text-xl font-bold mb-3">Almacenamiento flexible</h3>
+            <p class="text-white/75">Elige el espacio que realmente necesitas.</p>
+          </div>
+
+          <div class="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition duration-300">
+            <h3 class="text-xl font-bold mb-3">Acceso rápido</h3>
+            <p class="text-white/75">Consulta tus archivos desde cualquier dispositivo.</p>
+          </div>
+
+          <div class="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition duration-300">
+            <h3 class="text-xl font-bold mb-3">Seguridad</h3>
+            <p class="text-white/75">Tus documentos se mantienen protegidos en la nube.</p>
+          </div>
+
+          <div class="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition duration-300">
+            <h3 class="text-xl font-bold mb-3">Organización</h3>
+            <p class="text-white/75">Mantén tus archivos ordenados y disponibles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="planes" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-5 text-center">
+        <span class="text-cielo font-bold uppercase tracking-widest text-sm">
+          Planes
+        </span>
+
+        <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-14">
+          Elige tu espacio ideal
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+          <article class="border border-beige rounded-3xl p-8 hover:shadow-xl hover:-translate-y-2 transition duration-500">
+            <h3 class="text-2xl font-bold">Básico</h3>
+            <p class="text-marino/60 mt-2">Para uso personal y escolar.</p>
+            <p class="text-4xl font-bold my-6">100 GB</p>
+            <ul class="space-y-3 text-marino/75 mb-8">
+              <li>✓ Archivos escolares</li>
+              <li>✓ Fotos y documentos</li>
+              <li>✓ Acceso desde dispositivos</li>
+            </ul>
+            <a href="#contacto" class="block text-center bg-beige text-marino py-3 rounded-full font-semibold hover:bg-cielo transition">
+              Elegir plan
+            </a>
+          </article>
+
+          <article class="bg-marino text-white rounded-3xl p-8 shadow-2xl scale-105">
+            <span class="bg-cielo text-marino px-4 py-1 rounded-full text-sm font-bold">
+              Más popular
+            </span>
+            <h3 class="text-2xl font-bold mt-5">Plus</h3>
+            <p class="text-white/70 mt-2">Para estudiantes y emprendedores.</p>
+            <p class="text-4xl font-bold my-6">1 TB</p>
+            <ul class="space-y-3 text-white/75 mb-8">
+              <li>✓ Más espacio</li>
+              <li>✓ Respaldo seguro</li>
+              <li>✓ Organización avanzada</li>
+            </ul>
+            <a href="#contacto" class="block text-center bg-cielo text-marino py-3 rounded-full font-semibold hover:bg-white transition">
+              Elegir plan
+            </a>
+          </article>
+
+          <article class="border border-beige rounded-3xl p-8 hover:shadow-xl hover:-translate-y-2 transition duration-500">
+            <h3 class="text-2xl font-bold">Pro</h3>
+            <p class="text-marino/60 mt-2">Para creadores y equipos.</p>
+            <p class="text-4xl font-bold my-6">2 TB</p>
+            <ul class="space-y-3 text-marino/75 mb-8">
+              <li>✓ Videos y archivos pesados</li>
+              <li>✓ Uso profesional</li>
+              <li>✓ Mayor capacidad</li>
+            </ul>
+            <a href="#contacto" class="block text-center bg-beige text-marino py-3 rounded-full font-semibold hover:bg-cielo transition">
+              Elegir plan
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-gradient-to-br from-cielo via-white to-beige">
+      <div class="max-w-5xl mx-auto px-5 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">
+          Tu espacio digital, más claro y seguro.
+        </h2>
+
+        <p class="text-lg text-marino/75 mb-8">
+          Insky habla con un tono moderno, confiable y cercano. Queremos que guardar archivos sea fácil, bonito y sin estrés.
+        </p>
+
+        <a href="#contacto" class="inline-block bg-marino text-white px-8 py-4 rounded-full font-semibold hover:bg-cielo hover:text-marino transition duration-300">
+          Empieza con Insky
+        </a>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-cielo font-bold uppercase tracking-widest text-sm">
+            Contacto
+          </span>
+
+          <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">
+            ¿Listo para tener más espacio?
+          </h2>
+
+          <p class="text-marino/75 text-lg mb-8">
+            Escríbenos y encuentra el plan de almacenamiento en la nube perfecto para ti.
+          </p>
+
+          <div class="space-y-4 text-marino/80">
+            <p><strong>Email:</strong> contacto@insky.com</p>
+            <p><strong>Teléfono:</strong> +52 477 000 0000</p>
+            <p><strong>Ubicación:</strong> León, Guanajuato</p>
+          </div>
+        </div>
+
+        <form id="registro-form" class="bg-beige/70 p-8 rounded-3xl shadow-lg space-y-5">
+          <div>
+            <label class="block text-sm font-bold mb-2">Nombre</label>
+            <input type="text" name="nombre" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl border border-beige focus:outline-none focus:ring-2 focus:ring-cielo">
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold mb-2">Correo</label>
+            <input type="email" name="email" placeholder="tu@email.com" class="w-full px-4 py-3 rounded-xl border border-beige focus:outline-none focus:ring-2 focus:ring-cielo">
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold mb-2">Mensaje</label>
+            <textarea name="mensaje" rows="4" placeholder="Quiero más información..." class="w-full px-4 py-3 rounded-xl border border-beige focus:outline-none focus:ring-2 focus:ring-cielo"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-marino text-white py-3 rounded-full font-semibold hover:bg-cielo hover:text-marino transition duration-300">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-marino text-white py-8">
+    <div class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-bold text-xl">Insky</p>
+      <p class="text-white/70 text-sm">© 2026 Insky. Almacenamiento en la nube.</p>
+    </div>
+  </footer>
+<script>
+const form = document.getElementById('registro-form');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+        nombre: form.nombre.value,
+        email: form.email.value,
+        mensaje: form.mensaje.value
+    };
+
+    try {
+        const response = await fetch('https://render-mail-agqi.onrender.com/contacto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        alert(result.mensaje || 'Mensaje enviado');
+        form.reset();
+
+    } catch (error) {
+        alert('Error al enviar el formulario');
+    }
+});
+</script>
+
+</body>
+</html>
